@@ -1,0 +1,8 @@
+{
+    "toyboxes": {
+        "github.com/NicMagnier/PlaydateLDtkImporter": "main"
+    },
+    "installed": {
+        "github.com/NicMagnier/PlaydateLDtkImporter": "main@8266e53f2d699bf07f7254bd83e76ee3eaa73194"
+    }
+}
