@@ -1,9 +1,0 @@
-name=Drama
-author=You, Inc.
-description=A basic game engine for creating light RPGs.
-bundleID=com.yourcompany.TemplateGame
-version=1.0
-buildNumber=100
-imagePath=pdassets
-pdxversion=20000
-buildtime=747707924
