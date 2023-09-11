@@ -1,4 +1,12 @@
+import "CoreLibs/object"
+import "CoreLibs/graphics"
+import "CoreLibs/sprites"
+import "CoreLibs/timer"
+import "CoreLibs/crank"
+import "CoreLibs/math"
+
 import '../toyboxes/toyboxes.lua'
+import 'player'
 
 local gfx = playdate.graphics
 
@@ -24,6 +32,7 @@ sprite:setCenter(0,0)
 sprite:setBounds(0, 0, 400, 240)
 sprite:add()  
 
+local player = Player(200,120)
 
 function playdate.update()
     playdate.drawFPS(0,0)
