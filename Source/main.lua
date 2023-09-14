@@ -7,45 +7,15 @@ import "CoreLibs/math"
 
 import '../toyboxes/toyboxes.lua'
 import 'player'
+import 'npc'
+import 'jsonUtil'
+import 'game'
 
 local pd = playdate
 local gfx = playdate.graphics
 
-gfx.setColor(gfx.kColorBlack)
-
--- Draw background. This can be imported from LDtk file
-local bgImage = gfx.image.new(400,240, gfx.kColorBlack) 
-local bg = gfx.sprite.new(bgImage)
-bg:moveTo(0, 0)
-bg:setCenter(0,0)
-bg:add()
-
--- Basic example of loading LDtk file
-LDtk.load( "ldtkfiles/test.ldtk"  )
-local tilemap = LDtk.create_tilemap("Level_0", "Main")
-gfx.sprite.addWallSprites( tilemap, LDtk.get_empty_tileIDs( "Level_0", "Solid", "Main") )
-
--- Create sprite and assign tilemap to it
-local sprite = gfx.sprite.new()
-sprite:setTilemap(tilemap)
-sprite:moveTo(0, 0)
---sprite:setZIndex(-1) -- get from tilemap
-sprite:setCenter(0,0)
-sprite:setBounds(0, 0, 400, 240)
-sprite:add()  
-
-
--- Load Entities
-for index, entity in ipairs( LDtk.get_entities( "Level_0" ) ) do
-    if entity.name=="NPC" then
-        --player.sprite:add()
-        --player.init( entity )
-        print("Found npc") -- Just sends console confirmation now
-    end
-end
-    
-
 function start()
+    game.loadLevel()
     player = Player(200,120)
 
 
