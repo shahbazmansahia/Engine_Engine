@@ -1,20 +1,24 @@
+
+
 local pd <const> = playdate
 local gfx <const> = playdate.graphics
 
+import "camera"
 
 class("Player").extends(gfx.sprite)
 
 function Player:init(x,y)
     Player.super.init(self)
-    self.speed = 2;
+    self.speed = 4;
     self.dirX = 0;
     self.dirY = 0;
-    
-    local image = gfx.image.new("sprites/hero_idle_D.png")
-    self:setImage(image)
-    local w,h = image:getSize()
 
-    self:setCollideRect(4,8, 8,8)
+    self.idleTable = gfx.imagetable.new("sprites/characters/mcidle")
+
+    self:setImage(self.idleTable:getImage(1))
+    local w,h = self.idleTable:getImage(1):getSize()
+    self:setZIndex(100)
+    self:setCollideRect(8,16, 16,16)
 
     self:moveTo(x,y)
     self:add()
@@ -41,10 +45,21 @@ function Player:update()
     self.dirX = 0;
     self.dirY = 0;
 
-    --setCameraPosition(self.x, self.y)
+    setCameraPosition(self.x, self.y)
 end
 
 function Player:move(dirX, dirY)
+
+    if(dirY < 0)then
+        self:setImage(self.idleTable:getImage(3))
+    elseif (dirY > 0) then
+        self:setImage(self.idleTable:getImage(1))
+    elseif (dirX < 0) then
+        self:setImage(self.idleTable:getImage(2))
+    elseif (dirX > 0) then
+        self:setImage(self.idleTable:getImage(4))
+    end
+
     -- normalize
     self.dirX = dirX;
     self.dirY = dirY;
