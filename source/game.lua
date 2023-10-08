@@ -1,4 +1,4 @@
-//// Controls all gameplay logic
+-- Controls all gameplay logic
 
 game = {}
 

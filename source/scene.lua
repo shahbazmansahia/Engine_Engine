@@ -1,4 +1,4 @@
-//// Represents a single LDtk level and all of its objects within it.
+-- Represents a single LDtk level and all of its objects within it.
 
 
 
