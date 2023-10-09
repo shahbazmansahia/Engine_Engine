@@ -3,3 +3,4 @@
 --
 
 import 'github-dot-com/NicMagnier/PlaydateLDtkImporter/LDtk.lua'
+import 'github-dot-com/ZeAntwan/narrator-playdate/narrator/narrator.lua'
