@@ -51,7 +51,27 @@
 			"seed": 4682981,
 			"overrideTilesetUid": null,
 			"gridTiles": [],
-			"entityInstances": []
+			"entityInstances": [
+				{
+					"__identifier": "NPC",
+					"__grid": [23,6],
+					"__pivot": [0,0],
+					"__tags": ["Actor"],
+					"__tile": { "tilesetUid": 15, "x": 16, "y": 328, "w": 16, "h": 16 },
+					"__smartColor": "#BE4A2F",
+					"__worldX": 368,
+					"__worldY": 96,
+					"iid": "78cb51f0-6280-11ee-b5be-4932158246ac",
+					"width": 32,
+					"height": 32,
+					"defUid": 13,
+					"px": [368,96],
+					"fieldInstances": [{ "__identifier": "Name", "__type": "String", "__value": "Pilot2", "__tile": null, "defUid": 16, "realEditorValues": [{
+						"id": "V_String",
+						"params": ["Pilot2"]
+					}] }]
+				}
+			]
 		},
 		{
 			"__identifier": "Nature",

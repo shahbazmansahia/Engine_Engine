@@ -11,7 +11,7 @@
 	"iid": "528f5300-3b70-11ee-9aba-c971e2f3f45e",
 	"jsonVersion": "1.4.1",
 	"appBuildId": 471015,
-	"nextUid": 13,
+	"nextUid": 17,
 	"identifierStyle": "Capitalize",
 	"toc": [],
 	"worldLayout": "Free",
@@ -204,6 +204,79 @@
 					"tilesetUid": null
 				}
 			]
+		},
+		{
+			"identifier": "NPC",
+			"uid": 13,
+			"tags": ["Actor"],
+			"exportToToc": false,
+			"doc": null,
+			"width": 32,
+			"height": 32,
+			"resizableX": false,
+			"resizableY": false,
+			"minWidth": null,
+			"maxWidth": null,
+			"minHeight": null,
+			"maxHeight": null,
+			"keepAspectRatio": false,
+			"tileOpacity": 1,
+			"fillOpacity": 0.08,
+			"lineOpacity": 0,
+			"hollow": false,
+			"color": "#BE4A2F",
+			"renderMode": "Tile",
+			"showName": true,
+			"tilesetId": 15,
+			"tileRenderMode": "FitInside",
+			"tileRect": { "tilesetUid": 15, "x": 16, "y": 328, "w": 16, "h": 16 },
+			"uiTileRect": null,
+			"nineSliceBorders": [],
+			"maxCount": 0,
+			"limitScope": "PerLevel",
+			"limitBehavior": "MoveLastOne",
+			"pivotX": 0,
+			"pivotY": 0,
+			"fieldDefs": [
+				{
+					"identifier": "Name",
+					"doc": "The character's name",
+					"__type": "String",
+					"uid": 16,
+					"type": "F_String",
+					"isArray": false,
+					"canBeNull": false,
+					"arrayMinLength": null,
+					"arrayMaxLength": null,
+					"editorDisplayMode": "ValueOnly",
+					"editorDisplayScale": 1,
+					"editorDisplayPos": "Above",
+					"editorLinkStyle": "StraightArrow",
+					"editorDisplayColor": "#000000",
+					"editorAlwaysShow": true,
+					"editorShowInWorld": true,
+					"editorCutLongValues": true,
+					"editorTextSuffix": null,
+					"editorTextPrefix": null,
+					"useForSmartColor": false,
+					"min": null,
+					"max": null,
+					"regex": null,
+					"acceptFileTypes": null,
+					"defaultOverride": {
+						"id": "V_String",
+						"params": ["\"\""]
+					},
+					"textLanguageMode": null,
+					"symmetricalRef": false,
+					"autoChainRef": true,
+					"allowOutOfLevelRef": true,
+					"allowedRefs": "OnlySame",
+					"allowedRefsEntityUid": null,
+					"allowedRefTags": [],
+					"tilesetUid": null
+				}
+			]
 		}
 	], "tilesets": [
 		{
@@ -248,6 +321,50 @@
 			"cachedPixelData": {
 				"opaqueTiles": "111111111111111111111111111111111111",
 				"averageColors": "fffffffffffffffff999f999fffffffffffffffffbbbfbbbffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+			}
+		},
+		{
+			"__cWid": 21,
+			"__cHei": 21,
+			"identifier": "Smileys_people",
+			"uid": 14,
+			"relPath": "../sprites/1-bit icon/smileys & people.png",
+			"embedAtlas": null,
+			"pxWid": 512,
+			"pxHei": 512,
+			"tileGridSize": 16,
+			"spacing": 8,
+			"padding": 8,
+			"tags": [],
+			"tagsSourceEnumUid": null,
+			"enumTags": [],
+			"customData": [],
+			"savedSelections": [],
+			"cachedPixelData": {
+				"opaqueTiles": "111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111",
+				"averageColors": "faaafaaafaaafbbbfbbbfaaafbbbfbbbfbbbfbbbfaaafbbbfbbbfbbbfbbbfaaafbbbfbbbfaaafbbbfaaafaaafaaafaaafbbbfaaafaaafaaafaaafaaafaaafaaafbbbf666fbbbfbbbfaaafbbbfbbbfaaafbbbfaaaf999fbbbfbbbfaaafbbbfbbbfaaafaaaf999f999fbbbfbbbfaaafaaafbbbfaaafaaafbbbfaaaf999faaafaaafaaafaaafbbbfaaafaaafaaafaaafbbbfaaafbbbf999f999fbbbfbbbfaaafaaafaaafaaafbbbfaaafbbbfbbbfbbbfaaafaaafbbbfbbbfbbbfbbbfbbbfbbbfbbbf888f999faaafaaaf888f999faaaf999f999fbbbfbbbfbbbfaaafaaafbbbfbbbfaaafaaafaaafaaafaaafaaaf999fbbbf888f888f888f888f999faaaf999faaaf999f888f888f888f999f888faaaf777f999f999f999faaafaaaf999fbbbfbbbfbbbfaaafaaafaaafaaaf999f999f999f999f999faaaf999f999f999f999f888faaafaaafaaaf999f888f777faaafaaafaaaf888faaaf777f999f777faaaf999f888f888f888f666f999f888faaaf777f777f777f777faaafaaaf888f888f777f999faaaf999fbbbf888f666f888f777f777f555f999f777f777f999f999f888f888f999f999f777f777f888f999f888faaaf777f777f777f999faaafaaafaaafaaafaaafaaafbbbfbbbfbbbfaaafaaaf888faaafbbbfbbbfaaafaaaf999faaaf999fbbbf999faaafcccfbbbfcccfcccfbbbfbbbfaaafaaafbbbfbbbfaaafaaafbbbf555faaaf999faaaf999f888f888faaaf666f666f999faaafaaafbbbf999f999fbbbf888f888f999f999fbbbfaaafaaaf666f666faaafaaafaaafaaaf999f888f999f888f888f999fbbbf999faaafaaafaaafaaaf999f999f999f888f888f111f111f111f111f111f111f111f111f111f111f111f888f888f999f999fbbbfaaafaaaf999f777faaaf999f888f999faaafbbbfaaaf999f111f111f111f111f888faaaf888f888f888f888f888f999f777f888f777f888f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111"
+			}
+		},
+		{
+			"__cWid": 20,
+			"__cHei": 20,
+			"identifier": "Food_drink",
+			"uid": 15,
+			"relPath": "../sprites/1-bit icon/food & drink.png",
+			"embedAtlas": null,
+			"pxWid": 512,
+			"pxHei": 512,
+			"tileGridSize": 16,
+			"spacing": 8,
+			"padding": 16,
+			"tags": [],
+			"tagsSourceEnumUid": null,
+			"enumTags": [],
+			"customData": [],
+			"savedSelections": [],
+			"cachedPixelData": {
+				"opaqueTiles": "1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111",
+				"averageColors": "f888faaaf999f888f999f999f999f999faaaf888fbbbf888f999f888faaaf888f999f999f111f111faaafaaafbbbf888faaafaaaf999f999f999faaaf999f999faaaf999f888f999f999f999f111f111f888faaaf999f999f888f999f888f999f888f999faaaf999f888f777f888f888f777f777f111f111f999faaaf888f999f999f999f999f888fbbbf888f999f999f999f999f888f888f999f111f111f111f999f999fbbbfaaafcccfaaaf888f888f888f999f888f888fbbbf999f888faaaf888f888f111f111fbbbfaaaf999f999f888f999faaaf888faaaf999f777f777f888f888f999f999f777faaaf111f111faaaf999f999f999f999f999faaaf999faaaf888faaafaaaf777f999fbbbf999f111f111f111f111f999fbbbf999f888f777faaaf888faaaf999f888f888f888f888f999f888f111f111f111f111f111f777f888f888f999f999fbbbfbbbfaaaf999f999f999f999f999faaafaaaf111f111f111f111f111f999faaafaaaf777f999f999f777f999f999f111f111f111f111f111f111f111f111f111f111f111f999f888f999f777f777f777f888f888f888f111f111f111f111f111f111f111f111f111f111f111f999f444f999f777f999f999f888fbbbfaaaf111f111f111f111f111f111f111f111f111f111f111f999fbbbf999f999faaaf555f111f111f111f111f111f111f111f111f111f111f111f111f111f111faaafaaaf888faaaf666f666f888f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111f111"
 			}
 		}
 	], "enums": [{ "identifier": "TileType", "uid": 6, "values": [{ "id": "Solid", "tileRect": null, "color": 12470831 }], "iconTilesetUid": 5, "externalRelPath": null, "externalFileChecksum": null, "tags": [] }], "externalEnums": [], "levelFields": [] },

@@ -30,27 +30,13 @@ function game.loadScene(sceneName)
         LDtk.release_level(previousLevel)
     end
 
-    scene.draw(sceneName)
+    local scene = Scene(CURRENT_SCENE)
+    scene:draw()
     --player.sprite:add()
 
     local charactersDB = convertJSONToTable('db_characters.json')
-  
-    --[[
-    -- Load Entities
-    for index, entity in ipairs( LDtk.get_entities( "Level_0" ) ) do
-        if entity.name=="NPC" then
-            local cData = charactersDB[entity.fields.Name]
-            if(cData == nil) then
-                print("-- ERROR - Level:placeNPC() : Failed to find ".. entity.fields.Name .." in character database")
-                return nil
-            else
-                npc1 = NPC(entity, cData)
-            end
-            
-            --print(entity.fields.Name) -- Just sends console confirmation now
-        end
-    end
-    ]]
+
+    
 
 end
 

@@ -1,18 +1,6 @@
 {
-    "Princess" : {
-        "name" : "Princess",
-        "source" : "sprites/characters/HEROS/PRINCESS/npc_princess_idle_D"
-    },
-    "Snake" : {
-        "name" : "Snake",
-        "source" : "sprites/characters/ENEMIES/SNAKE/npc_snake_idle_D"
-    },
-    "Dog" : {
-        "name" : "Dog",
-        "source" : "sprites/characters/HEROS/DOGGO/npc_dog_idle_D"
-    },
-    "Slime" : {
-        "name" : "Slime",
-        "source" : "sprites/characters/ENEMIES/BLOB/npc_slime_idle_D"
+    "Pilot2" : {
+        "id" : "Pilot2",
+        "source" : "sprites/characters/Pilot2"
     }
 }
