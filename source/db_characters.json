@@ -1,6 +1,9 @@
 {
     "Pilot2" : {
         "id" : "Pilot2",
-        "source" : "sprites/characters/Pilot2"
+        "source" : "sprites/characters/Pilot2",
+        "defaultInteraction"  : {
+            "text" : "Hello there..."
+        }
     }
 }

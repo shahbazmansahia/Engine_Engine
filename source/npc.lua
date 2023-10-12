@@ -6,6 +6,7 @@ class("NPC").extends(gfx.sprite)
 
 function NPC:init(lData, cData)
     NPC.super.init(self)
+    self.type = TYPE_NPC
     self.id = cData.id
     self.speed = 2;
     

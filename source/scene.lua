@@ -12,21 +12,25 @@ function Scene:init(sceneName)
     self.collisions = {}
     self.entities = {}
 
+
 end
 
 function Scene:unload()
 
+    for entityName in pairs(self.entities) do
+        self.entities[entityName]:remove()
+    end
+
+    for layerName, layer in pairs(self.layers) do
+        self.layers[layerName]:remove()
+        gfx.sprite.removeSprites(self.collisions[layerName])
+    end
 end
 
 function Scene:draw()
 
     --playdate.graphics.sprite.removeAll()
-    for layerName, layer in pairs(self.layers) do
-        layers[layerName]:remove()
-        gfx.sprite.removeSprites(collisions[layerName])
-    end
 
-    
     for layerName, layer in pairs(LDtk.get_layers(self.name)) do        
         if not layer.tiles then
 			goto continue
@@ -42,10 +46,10 @@ function Scene:draw()
 		layerSprite:add()
         self.layers[layerName] = layerSprite
 
-		local emptyTiles = LDtk.get_empty_tileIDs(scene, "Solid", layerName)
+		local emptyTiles = LDtk.get_empty_tileIDs(self.name, "Solid", layerName)
 
 		if emptyTiles then
-			self.collisions[layerName] = playdate.graphics.sprite.addWallSprites(tilemap, emptyTiles)
+			self.collisions[layerName] = gfx.sprite.addWallSprites(tilemap, emptyTiles)
 		end
 
         ::continue::
@@ -55,16 +59,18 @@ function Scene:draw()
     local sceneRect = LDtk.get_rect(self.name)
     SCENE_WIDTH = sceneRect.width
     SCENE_HEIGHT = sceneRect.height
+    
+
 
 end
 
 function Scene:loadEntities()
-        -- Load Entities
+
         for index, entity in ipairs( LDtk.get_entities(self.name) ) do
             if entity.name=="NPC" then
                 local cData = charactersDB[entity.fields.Name]
                 if(cData == nil) then
-                    print("-- ERROR - Level:placeNPC() : Failed to find ".. entity.fields.Name .." in character database")
+                    print("-- ERROR - Scene:loadEntities() : Failed to find ".. entity.fields.Name .." in character database")
                     return nil
                 else
                     local e = NPC(entity, cData)

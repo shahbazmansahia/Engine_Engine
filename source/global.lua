@@ -3,21 +3,21 @@ pd = playdate
 gfx = playdate.graphics
 
 -- object types
-tPlayer = 1
-tDoor = 2
-tNPC = 3
+TYPE_PLAYER = 1
+TYPE_DOOR = 2
+TYPE_NPC = 3
 
 -- databases
 charactersDB = {};
 doorsDB = {};
 
-sMenu = 1
-sExploring = 2
-sDialogue = 3
+STATE_MENU = 1
+STATE_EXPLORING = 2
+STATE_DIALOGUE = 3
 
 -- scene info
 CURRENT_SCENE = ""
 SCENE_WIDTH = 0
 SCENE_HEIGHT = 0
 
-currentState = sMenu
+CURRENT_STATE = STATE_MENU

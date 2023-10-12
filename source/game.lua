@@ -5,9 +5,13 @@ game = {}
 local pd = playdate
 local gfx = playdate.graphics
 
+local scene
+
 import "scene"
 
 function game.start()
+    charactersDB = convertJSONToTable('db_characters.json')
+
     LDtk.load( "ldtkfiles/NativeWorld.ldtk"  )
 
     CURRENT_SCENE = "Level_0"
@@ -17,7 +21,7 @@ function game.start()
     
 
 
-    currentState = sExploring
+    CURRENT_STATE = STATE_EXPLORING
 end
 
 function game.loadScene(sceneName)
@@ -29,19 +33,26 @@ function game.loadScene(sceneName)
     if not(previousLevel == sceneName) then
         LDtk.release_level(previousLevel)
     end
-
-    local scene = Scene(CURRENT_SCENE)
-    scene:draw()
-    --player.sprite:add()
-
-    local charactersDB = convertJSONToTable('db_characters.json')
-
     
+    if not(scene == nil) then
+        scene:unload()
+    end
 
+    scene = Scene(CURRENT_SCENE)
+    scene:draw()
+    scene:loadEntities()
+    --player.sprite:add()
 end
 
 function game.update()
-    getMovementInputVector()
+
+    if CURRENT_STATE == STATE_MENU then
+    elseif CURRENT_STATE == STATE_EXPLORING then
+        getMovementInputVector()
+    elseif CURRENT_STATE == STATE_DIALOGUE then
+    else
+        print("ERROR main.lua - Main in unknown state | currentState = " .. CURRENT_STATE )
+    end
 
     changeSceneOnScreenExit()
 
@@ -83,6 +94,22 @@ function changeSceneOnScreenExit()
     elseif sceneFound == false then
         print("No scene found in [" .. outOfBounds .. "] direction")
     end  
+end
+
+function pd.BButtonDown()
+    if CURRENT_STATE == STATE_MENU then
+    elseif CURRENT_STATE == STATE_EXPLORING then
+        player:checkForAction()
+    elseif CURRENT_STATE == STATE_DIALOGUE then
+    end
+end
+
+function pd.AButtonDown()
+    if CURRENT_STATE == STATE_MENU then
+    elseif CURRENT_STATE == STATE_EXPLORING then
+    elseif CURRENT_STATE == STATE_DIALOGUE then
+        eEndConversation()
+    end
 end
 
 function getMovementInputVector()

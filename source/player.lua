@@ -9,6 +9,7 @@ class("Player").extends(gfx.sprite)
 
 function Player:init(x,y)
     Player.super.init(self)
+    self.type = TYPE_PLAYER
     self.speed = 4;
     self.dirX = 0;
     self.dirY = 0;
@@ -67,17 +68,16 @@ end
 
 function Player:checkForAction()
 
-    local x,y,collisions,collisonCount = self:checkCollisions(self.x, self.y)
-    --[[
+    -- this doesn't work because the player isn't colliding *through* the NPC collider. 
 
- 
+    local x,y,collisions,collisonCount = self:checkCollisions(self.x, self.y)
+
     for i = 1, collisonCount do
         local collision = collisions[i].other
-        if collision.type == tNPC then 
+        if collision.type == TYPE_NPC then 
             eStartConversation(collision.id)
         end
     end
-       ]]
      -- input should switch to dialogue
         
 
