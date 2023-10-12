@@ -15,6 +15,8 @@ function Scene:init(sceneName)
 
 end
 
+-- Scenes must be unloaded before destroyed
+-- Removes all sprites and entities created by this scene
 function Scene:unload()
 
     for entityName in pairs(self.entities) do
@@ -27,6 +29,7 @@ function Scene:unload()
     end
 end
 
+-- Called once; Draws the LDtk level
 function Scene:draw()
 
     --playdate.graphics.sprite.removeAll()
@@ -64,6 +67,7 @@ function Scene:draw()
 
 end
 
+-- Called once; Loads all entities found in the current LDtk level
 function Scene:loadEntities()
 
         for index, entity in ipairs( LDtk.get_entities(self.name) ) do

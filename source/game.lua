@@ -9,6 +9,7 @@ local scene
 
 import "scene"
 
+-- Must be called at the start of the game state
 function game.start()
     charactersDB = convertJSONToTable('db_characters.json')
 
@@ -18,18 +19,17 @@ function game.start()
     
     player = Player(200,120)
     game.loadScene(CURRENT_SCENE)
-    
-
 
     CURRENT_STATE = STATE_EXPLORING
 end
 
+-- Unloads the current scene, then loads the desired scene
 function game.loadScene(sceneName)
     
     local previousLevel = CURRENT_SCENE
     CURRENT_SCENE = sceneName
 
-    LDtk.load_level(sceneName)
+    LDtk.load_level(sceneName) -- it is better to load first
     if not(previousLevel == sceneName) then
         LDtk.release_level(previousLevel)
     end
@@ -44,6 +44,7 @@ function game.loadScene(sceneName)
     --player.sprite:add()
 end
 
+-- Perform code every frame specific to current game state
 function game.update()
 
     if CURRENT_STATE == STATE_MENU then

@@ -1,5 +1,3 @@
-
-
 local pd <const> = playdate
 local gfx <const> = playdate.graphics
 
@@ -26,7 +24,8 @@ function Player:init(x,y)
 end
 
 function Player:update()
-    --self:moveBy(self.dirX * self.speed, self.dirY * self.speed);
+    
+    -- Move player 
     local x,y,collisions,collisonCount = self:moveWithCollisions(self.x + self.dirX * self.speed, self.y + self.dirY * self.speed)
 
     --[[
@@ -49,6 +48,8 @@ function Player:update()
     setCameraPosition(self.x, self.y)
 end
 
+-- Should be called something else or split up
+-- Set direction of player
 function Player:move(dirX, dirY)
 
     if(dirY < 0)then
@@ -66,12 +67,11 @@ function Player:move(dirX, dirY)
     self.dirY = dirY;
 end
 
+-- When colliding with anything, check for interaction
+-- This should be transfered to another class to support NPC x NPC interaction
 function Player:checkForAction()
-
     -- this doesn't work because the player isn't colliding *through* the NPC collider. 
-
     local x,y,collisions,collisonCount = self:checkCollisions(self.x, self.y)
-
     for i = 1, collisonCount do
         local collision = collisions[i].other
         if collision.type == TYPE_NPC then 
@@ -79,9 +79,6 @@ function Player:checkForAction()
         end
     end
      -- input should switch to dialogue
-        
-
-
 end
 
 function Player:collisionResponse(other)
