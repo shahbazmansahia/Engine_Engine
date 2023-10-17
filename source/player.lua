@@ -82,10 +82,10 @@ function Player:checkForAction()
 end
 
 function Player:collisionResponse(other)
-   -- if(other.type == tNPC) then
-  --      return gfx.sprite.kCollisionTypeOverlap
-  --  else
+   if(other.type == TYPE_NPC) then
+        return gfx.sprite.kCollisionTypeOverlap
+    else
         return gfx.sprite.kCollisionTypeSlide
- --   end
+    end
 
 end

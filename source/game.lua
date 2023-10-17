@@ -1,5 +1,9 @@
 -- Controls all gameplay logic
 
+import 'events'
+import 'player'
+import 'npc'
+
 game = {}
 
 local pd = playdate

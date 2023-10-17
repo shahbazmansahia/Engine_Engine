@@ -7,8 +7,6 @@ import "CoreLibs/math"
 
 import "global"
 import '../toyboxes/toyboxes.lua'
-import 'player'
-import 'npc'
 import 'jsonUtil'
 import 'game'
 import 'mathUtil'

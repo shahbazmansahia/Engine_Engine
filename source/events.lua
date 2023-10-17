@@ -19,11 +19,11 @@ function eStartConversation(id)
     print("Hi " .. id)
     
 
-    CURRENT_STATE = STATE_DIALOGUE
+    --CURRENT_STATE = STATE_DIALOGUE
 end
 
 function eEndConversation()
 
-    CURRENT_STATE = STATE_EXPLORING
+    --CURRENT_STATE = STATE_EXPLORING
     
 end

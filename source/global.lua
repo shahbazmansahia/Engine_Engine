@@ -6,6 +6,7 @@ gfx = playdate.graphics
 TYPE_PLAYER = 1
 TYPE_DOOR = 2
 TYPE_NPC = 3
+TYPE_TRIGGER = 4
 
 -- databases
 charactersDB = {};
