@@ -45,7 +45,7 @@ function Player:update()
     self.dirX = 0;
     self.dirY = 0;
 
-    setCameraPosition(self.x, self.y)
+    camera.setCameraPosition(self.x, self.y)
 end
 
 -- Should be called something else or split up

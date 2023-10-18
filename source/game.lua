@@ -3,6 +3,7 @@
 import 'events'
 import 'player'
 import 'npc'
+import 'dialogue'
 
 game = {}
 
@@ -106,6 +107,7 @@ function pd.BButtonDown()
     elseif CURRENT_STATE == STATE_EXPLORING then
         player:checkForAction()
     elseif CURRENT_STATE == STATE_DIALOGUE then
+        dialogue.getNextText()
     end
 end
 

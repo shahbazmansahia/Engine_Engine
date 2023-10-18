@@ -1,4 +1,5 @@
 import "global"
+import "dialogue"
 
 function eOpenDoor(id)
 
@@ -16,14 +17,14 @@ function eStartConversation(id)
     
     -- check if conversation hasn't started
 
-    print("Hi " .. id)
-    
+    --print("Hi " .. id)
+    dialogue.initDialogue("hi")
 
-    --CURRENT_STATE = STATE_DIALOGUE
+    CURRENT_STATE = STATE_DIALOGUE
 end
 
 function eEndConversation()
 
-    --CURRENT_STATE = STATE_EXPLORING
+    CURRENT_STATE = STATE_EXPLORING
     
 end

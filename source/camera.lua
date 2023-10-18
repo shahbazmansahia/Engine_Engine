@@ -1,9 +1,9 @@
 local xOffset = 0
 local yOffset = 0
 
+camera = {}
 
-
-function setCameraPosition(x,y)
+function camera.setCameraPosition(x,y)
 
     --local newX = floor(max(min(x - 200 + 60, maxX), minX))
 
@@ -13,6 +13,6 @@ function setCameraPosition(x,y)
     gfx.setDrawOffset(-xOffset,-yOffset)
 end
 
-function getCameraOffset()
+function camera.getCameraOffset()
     return xOffset, yOffset
 end
