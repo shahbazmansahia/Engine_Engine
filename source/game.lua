@@ -105,17 +105,17 @@ end
 function pd.BButtonDown()
     if CURRENT_STATE == STATE_MENU then
     elseif CURRENT_STATE == STATE_EXPLORING then
-        player:checkForAction()
     elseif CURRENT_STATE == STATE_DIALOGUE then
-        dialogue.getNextText()
+        eEndConversation()
     end
 end
 
 function pd.AButtonDown()
     if CURRENT_STATE == STATE_MENU then
     elseif CURRENT_STATE == STATE_EXPLORING then
+        player:checkForAction()
     elseif CURRENT_STATE == STATE_DIALOGUE then
-        eEndConversation()
+        dialogue.getNextText()
     end
 end
 

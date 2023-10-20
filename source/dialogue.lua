@@ -5,9 +5,8 @@ import "textbox"
 local textBox
 
 local textList = {
-    "Hello!",
-    "How are you?",
-    "Bye"
+    "There is something old about this world",
+    "I feel as if we are being watched"
 }
 local textIndex = 1
 

@@ -42,6 +42,11 @@ function Textbox:setText(text)
     gfx.popContext()
 end
 
+function Textbox:remove()
+    self.txtImg:clear(playdate.graphics.kColorClear)
+    Textbox.super.remove(self)
+end
+
 --[[
 
     function Textbox:draw() ----- not working :( make a small test project
