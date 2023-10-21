@@ -12,6 +12,7 @@ function Textbox:init()
 
     local xOffset, yOffset = camera.getCameraOffset()
     self:moveTo(xOffset + 0, yOffset + 130)
+    --self:setZIndex(1000)
     self:add()
 
     local width = 380
@@ -40,6 +41,7 @@ function Textbox:setText(text)
     gfx.pushContext(self.txtImg)
         gfx.drawTextInRect(self.currentText, 0,0, self.txtImg.width, self.txtImg.height)
     gfx.popContext()
+    
 end
 
 function Textbox:remove()
