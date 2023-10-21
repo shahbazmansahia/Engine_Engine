@@ -1,0 +1,8 @@
+# System
+.DS_Store
+Thumbs.db
+
+# Defold
+narrator/defold-parser/.internal
+narrator/defold-parser/build
+/.vscode
