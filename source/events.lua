@@ -24,7 +24,7 @@ function eStartConversation(id)
 end
 
 function eEndConversation()
-
+    dialogue.stopDialogue()
     CURRENT_STATE = STATE_EXPLORING
     
 end

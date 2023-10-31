@@ -4,6 +4,7 @@ import "CoreLibs/sprites"
 import "CoreLibs/timer"
 import "CoreLibs/crank"
 import "CoreLibs/math"
+import "CoreLibs/ui"
 
 import "global"
 import '../toyboxes/toyboxes.lua'
@@ -24,6 +25,7 @@ function playdate.update()
     game.update()
     playdate.drawFPS(0,0)
     gfx.sprite.update()
+    pd.timer.updateTimers() 
 end
 
 

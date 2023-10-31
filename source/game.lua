@@ -115,7 +115,7 @@ function pd.AButtonDown()
     elseif CURRENT_STATE == STATE_EXPLORING then
         player:checkForAction()
     elseif CURRENT_STATE == STATE_DIALOGUE then
-        dialogue.getNextText()
+        dialogue.continue()
     end
 end
 

@@ -1,7 +1,7 @@
 --
 -- Dependencies
 
-import 'libs/lume'
+import '../libs/lume'
 
 --
 -- Metatable

@@ -79,7 +79,6 @@ function Scene:loadEntities()
                 else
                     local e = NPC(entity, cData)
                     self.entities[e.id] = e
-                    print("npc")
                 end
                 
                 --print(entity.fields.Name) -- Just sends console confirmation now

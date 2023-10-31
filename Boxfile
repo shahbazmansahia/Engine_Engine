@@ -4,7 +4,7 @@
         "github.com/ZeAntwan/narrator-playdate": "master"
     },
     "installed": {
-        "github.com/NicMagnier/PlaydateLDtkImporter": "main@9c9160a1873b35aa19f50bb11d49d8060f01b4e5",
-        "github.com/ZeAntwan/narrator-playdate": "master@ffca01672735b10066046103c1098a303fe51c06"
+        "github.com/ZeAntwan/narrator-playdate": "master@6ae2ed66c6f7ef33a7badacd889490c16f09a9c2",
+        "github.com/NicMagnier/PlaydateLDtkImporter": "main@9c9160a1873b35aa19f50bb11d49d8060f01b4e5"
     }
 }
