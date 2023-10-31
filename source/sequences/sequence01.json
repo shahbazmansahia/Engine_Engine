@@ -1,0 +1,10 @@
+{
+    "Pilot2" : {
+        "dialogue" : [
+            {
+                "path" : "dialogue/test",
+                "finished" : false
+            }
+        ]
+    }
+}
