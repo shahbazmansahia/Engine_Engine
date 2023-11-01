@@ -20,7 +20,7 @@ function game.start()
     charactersDB = convertJSONToTable('db_characters.json')
     currentSequence = convertJSONToTable('sequences/sequence01.json')
     --print(currentSequence.interactions[1].id)
-
+    
     LDtk.load( "ldtkfiles/NativeWorld.ldtk"  )
 
     CURRENT_SCENE = "Level_0"
