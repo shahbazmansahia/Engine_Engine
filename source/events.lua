@@ -1,7 +1,9 @@
-import "global"
+
 import "dialogue"
 
-function eOpenDoor(id)
+event = {}
+
+function event.OpenDoor(id)
 
     -- hmmmmm TODO
     -- break up level, other files may need to use file reading and json decoding
@@ -13,17 +15,19 @@ function eOpenDoor(id)
     --loadLevel(door.level, linkedDoor.x, linkedDoor.y, linkedDoor.spawnDir)
 end
 
-function eStartConversation(id)
+function event.StartConversation(id)
     
     -- check if conversation hasn't started
 
-    --print("Hi " .. id)
-    dialogue.initDialogue("hi")
+    local path = sequence.CheckForDialogueOverride(id)
+    --print(path)
+
+    dialogue.initDialogue(path)
 
     CURRENT_STATE = STATE_DIALOGUE
 end
 
-function eEndConversation()
+function event.EndConversation()
     dialogue.stopDialogue()
     CURRENT_STATE = STATE_EXPLORING
     

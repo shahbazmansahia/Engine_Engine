@@ -75,7 +75,7 @@ function Player:checkForAction()
     for i = 1, collisonCount do
         local collision = collisions[i].other
         if collision.type == TYPE_NPC then 
-            eStartConversation(collision.id)
+            event.StartConversation(collision.id)
         end
     end
      -- input should switch to dialogue

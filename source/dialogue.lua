@@ -1,6 +1,6 @@
-dialogue = {}
-
 import "textbox"
+
+dialogue = {}
 
 -- We need a better way to do this
 local book = 
@@ -14,8 +14,9 @@ local textQueueLength = 0
 local textIndex = 1
 local maxCharacters = 150
 
+function dialogue.initDialogue(path)
+    -- now that i have a path to the ink story, what do I do now?
 
-function dialogue.initDialogue(text)
     story = narrator.init_story(book)
     dialogueEnded = false
     textIndex = 1
@@ -85,7 +86,7 @@ function dialogue.getNextText()
     textIndex = textIndex + 1
 
   else
-    eEndConversation()
+    event.EndConversation()
   end
 end
 

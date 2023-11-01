@@ -4,6 +4,7 @@ import 'events'
 import 'player'
 import 'npc'
 import 'dialogue'
+import 'sequence'
 
 game = {}
 
@@ -17,6 +18,8 @@ import "scene"
 -- Must be called at the start of the game state
 function game.start()
     charactersDB = convertJSONToTable('db_characters.json')
+    currentSequence = convertJSONToTable('sequences/sequence01.json')
+    --print(currentSequence.interactions[1].id)
 
     LDtk.load( "ldtkfiles/NativeWorld.ldtk"  )
 
@@ -106,7 +109,7 @@ function pd.BButtonDown()
     if CURRENT_STATE == STATE_MENU then
     elseif CURRENT_STATE == STATE_EXPLORING then
     elseif CURRENT_STATE == STATE_DIALOGUE then
-        eEndConversation()
+        event.EndConversation()
     end
 end
 

@@ -9,8 +9,9 @@ TYPE_NPC = 3
 TYPE_TRIGGER = 4
 
 -- databases
-charactersDB = {};
-doorsDB = {};
+charactersDB = {}
+doorsDB = {}
+currentSequence = {}
 
 -- game state
 STATE_MENU = 1

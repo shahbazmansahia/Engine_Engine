@@ -1,10 +1,14 @@
 {
-    "Pilot2" : {
-        "dialogue" : [
-            {
-                "path" : "dialogue/test",
-                "finished" : false
-            }
-        ]
-    }
+    "interactions" : [
+        {
+            "id" : "Pilot2", 
+            "dialogue" : [
+                {
+                    "path" : "dialogue/test",
+                    "finished" : false
+                }
+            ]
+        }
+    ]
+
 }
