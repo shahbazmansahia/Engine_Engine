@@ -1,10 +1,6 @@
 import "textbox"
-
+import "inkPaths"
 dialogue = {}
-
--- We need a better way to do this
-local book = 
-import "dialogue/test"
 
 local story
 
@@ -16,8 +12,8 @@ local maxCharacters = 150
 
 function dialogue.initDialogue(path)
     -- now that i have a path to the ink story, what do I do now?
-
-    story = narrator.init_story(book)
+    print(path)
+    story = narrator.init_story(inkPaths[path])
     dialogueEnded = false
     textIndex = 1
     textQueueLength = 0
