@@ -19,7 +19,9 @@ function event.StartConversation(id)
     
     -- check if conversation hasn't started
 
-    local path = sequence.CheckForDialogueOverride(id)
+    --local path = sequence.CheckForDialogueOverride(id)
+    local path = "dialogue/test"
+    --local path = "dialogue/Pilot2"
     --print(path)
 
     dialogue.initDialogue(path)

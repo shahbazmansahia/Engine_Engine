@@ -1,34 +1,18 @@
 VAR test = false
-It seems that we are trapped here...
-Tags??
+This is a test {test}
+
 -> main
 
 === main ===
 
- * [What should we do?] -> what_should_we_do
- * [Tell me what happened again] -> what_happened_again
- * [Ask about the strange sounds] ->strange_sounds
- * {test}[We are not alone] -> not_alone
- * [I need to go now] -> end
+ * [This is a choice] -> choice1
+ * [Bye] -> end
  
     
-=== what_should_we_do ===
-
-Surivial isn't part of our training. Damn! How did this happen. And we still need to continue the mission. We spent too much time and resources already. Let's focus on finding shelter before nightfall
+=== choice1 ===
+lots of text
 ->main
 
-=== what_happened_again ===
-
-The ship crashed on arrival. 
--> main
-
-=== strange_sounds ===
-Strange sounds? I haven't heard anything like that. 
--> main
-
-=== not_alone ===
-Grab your rifle, we need to defend ourselves.
--> main
 
 === end ===
 Ok

@@ -5,7 +5,7 @@
     "part" : [
         {
             "interactions" : {
-                "Pilot2" : "hmm"
+                "Pilot2" : [""]
             },
             "completed" : false
         }
